@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "aliases": {
-                "JPush": "Frowhy\\JPush\\Facades\\JPush"
+                "JPushFactory": "Frowhy\\JPush\\Facades\\JPushFactory"
             },
             "providers": [
                 "Frowhy\\JPush\\Providers\\LaravelServiceProvider"

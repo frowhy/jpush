@@ -9,7 +9,7 @@
 namespace Frowhy\JPush;
 
 
-class JPush
+class Factory
 {
     private $app_key;
     private $master_secret;
