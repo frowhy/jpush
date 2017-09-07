@@ -8,7 +8,7 @@
 
 namespace Frowhy\JPush\Providers;
 
-use Frowhy\JPush\Factory;
+use Frowhy\JPush\JPush;
 use Illuminate\Support\ServiceProvider;
 
 abstract class AbstractServiceProvider extends ServiceProvider
@@ -39,7 +39,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerAliases()
     {
-        $this->app->alias('frowhy.jpush', Factory::class);
+        $this->app->alias('frowhy.jpush', JPush::class);
     }
 
     /**
@@ -50,7 +50,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
     protected function registerJPush()
     {
         $this->app->singleton('frowhy.jpush', function () {
-            return new Factory(
+            return new JPush(
                 $this->config('app_key'),
                 $this->config('master_secret')
             );

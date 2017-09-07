@@ -11,7 +11,7 @@ namespace Frowhy\JPush;
 
 use JPush\Client;
 
-class Factory
+class JPush
 {
     private $app_key;
     private $master_secret;
