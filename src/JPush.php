@@ -8,10 +8,32 @@
 
 namespace Frowhy\JPush;
 
+
+use JPush\Client;
+
 class JPush
 {
+    private $app_key;
+    private $master_secret;
+    private $JPush;
+
     public function __construct(string $app_key, string $master_secret)
     {
-        return new \JPush($app_key, $master_secret);
+        $this->app_key       = $app_key;
+        $this->master_secret = $master_secret;
+    }
+
+    /**
+     * @return Client
+     */
+    public function getInstance()
+    {
+        if ($this->JPush === null) {
+            $this->JPush = new Client($this->app_key, $this->master_secret);
+        } else {
+            $this->JPush;
+        }
+
+        return $this->JPush;
     }
 }
