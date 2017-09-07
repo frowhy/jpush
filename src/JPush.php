@@ -21,6 +21,9 @@ class JPush
         $this->master_secret = $master_secret;
     }
 
+    /**
+     * @return \JPush
+     */
     public function getInstance()
     {
         if ($this->JPush === null) {
