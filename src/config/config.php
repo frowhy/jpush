@@ -7,6 +7,6 @@
  */
 
 return [
-    'app_key'       => env('JPUSH_KEY'),
-    'master_secret' => env('JPUSH_SECRET'),
+    'app_key'       => env('JPUSH_KEY', ''),
+    'master_secret' => env('JPUSH_SECRET', ''),
 ];
