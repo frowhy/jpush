@@ -9,6 +9,8 @@
 namespace Frowhy\JPush;
 
 
+use JPush\Client;
+
 class Factory
 {
     private $app_key;
@@ -22,12 +24,12 @@ class Factory
     }
 
     /**
-     * @return \JPush
+     * @return Client
      */
     public function getInstance()
     {
         if ($this->JPush === null) {
-            $this->JPush = new \JPush($this->app_key, $this->master_secret);
+            $this->JPush = new Client($this->app_key, $this->master_secret);
         } else {
             $this->JPush;
         }
