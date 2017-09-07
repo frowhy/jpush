@@ -6,9 +6,7 @@
  * Time: 上午10:50
  */
 
-namespace Frowhy\Frowhy\Providers;
-
-use Frowhy\JPush\Providers\AbstractServiceProvider;
+namespace Frowhy\JPush\Providers;
 
 class LaravelServiceProvider extends AbstractServiceProvider
 {
