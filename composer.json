@@ -1,0 +1,34 @@
+{
+    "name": "frowhy/jpush",
+    "description": "Laravel JPush",
+    "type": "library",
+    "homepage": "https://github.com/frowhy/jpush",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "付广辉",
+            "email": "frowhy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "jpush/jpush": "^3.5",
+        "illuminate/support": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Frowhy\\JPush\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "JPush": "Frowhy\\JPush\\Facades\\JPush"
+            },
+            "providers": [
+                "Frowhy\\JPush\\Providers\\LaravelServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
