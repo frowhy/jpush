@@ -15,7 +15,7 @@ class LaravelServiceProvider extends AbstractServiceProvider
      */
     public function boot()
     {
-        $path = realpath(__DIR__ . '/../config/config.php');
+        $path = realpath(__DIR__ . '/../../config/config.php');
 
         $this->publishes([$path => config_path('jpush.php')], 'config');
         $this->mergeConfigFrom($path, 'jpush');
