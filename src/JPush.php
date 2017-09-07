@@ -10,7 +10,7 @@ namespace Frowhy\JPush;
 
 class JPush
 {
-    public function __construct(string $app_key, string $master_secret)
+    public function __construct(?string $app_key, ?string $master_secret)
     {
         return new \JPush($app_key, $master_secret);
     }
